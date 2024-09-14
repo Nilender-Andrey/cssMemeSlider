@@ -2,14 +2,49 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>CSS Meme Slider</title>
 </head>
 
 <body>
+  <div class="wrapper">
+    <input type="radio" name="point" id="slide1" checked />
+    <input type="radio" name="point" id="slide2" />
+    <input type="radio" name="point" id="slide3" />
+    <input type="radio" name="point" id="slide4" />
 
+    <div class="slider">
+      <div class="slide"><img src="./images/image_1.jpg" alt=""></div>
+      <div class="slide"><img src="./images/image_2.jpg" alt=""></div>
+      <div class="slide"><img src="./images/image_3.jpg" alt=""></div>
+      <div class="slide"><img src="./images/image_4.jpg" alt=""></div>
+    </div>
+
+    <div class="messages">
+      <div class="message">Привет! Я не придумал умных подписей</div>
+      <div class="message">А срок сдачи поджимал</div>
+      <div class="message">Поэтому я просто написал </div>
+      <div class="message">Это объяснение. Удачи!</div>
+    </div>
+
+    <div class="controls">
+      <label class="control" for="slide1">
+        <div></div>
+      </label>
+      <label class="control" for="slide2">
+        <div></div>
+      </label>
+      <label class="control" for="slide3">
+        <div></div>
+      </label>
+      <label class="control" for="slide4">
+        <div></div>
+      </label>
+    </div>
+  </div>
 </body>
 
 </html>
