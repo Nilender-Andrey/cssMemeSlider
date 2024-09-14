@@ -113,3 +113,41 @@ input[type='radio'] {
 .control:active div {
   transform: scale(0.8);
 }
+
+#slide1:checked ~ .controls .control:nth-of-type(1) div,
+#slide2:checked ~ .controls .control:nth-of-type(2) div,
+#slide3:checked ~ .controls .control:nth-of-type(3) div,
+#slide4:checked ~ .controls .control:nth-of-type(4) div {
+  background-color: #fff;
+}
+
+#slide1:checked ~ .slider .slide:nth-of-type(1),
+#slide2:checked ~ .slider .slide:nth-of-type(2),
+#slide3:checked ~ .slider .slide:nth-of-type(3),
+#slide4:checked ~ .slider .slide:nth-of-type(4) {
+  width: 100%;
+}
+
+#slide1:checked ~ .messages .message:nth-of-type(1),
+#slide2:checked ~ .messages .message:nth-of-type(2),
+#slide3:checked ~ .messages .message:nth-of-type(3),
+#slide4:checked ~ .messages .message:nth-of-type(4) {
+  width: 100%;
+  opacity: 1;
+}
+
+@media screen and (max-width: 640px) {
+  .wrapper {
+    display: grid;
+    grid-template-areas:
+      'slider slider slider'
+      '. controls .'
+      'messages messages messages';
+    grid-template-rows: 1fr max-content max-content;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .controls {
+    justify-self: center;
+  }
+}
