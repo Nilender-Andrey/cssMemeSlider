@@ -1,0 +1,115 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+  padding: 2vh 2vw;
+
+  overflow: hidden;
+  background-image: url(./images/fon.jpg);
+  background-repeat: repeat;
+
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #fff;
+}
+
+input[type='radio'] {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    'slider slider slider slider'
+    'messages messages messages controls';
+  grid-template-rows: 1fr max-content;
+  grid-template-columns: repeat(3, 1fr) max-content;
+  gap: 1%;
+
+  align-items: center;
+
+  width: 80vw;
+  height: 60vw;
+
+  max-width: 64rem;
+  max-height: 40rem;
+}
+
+.slider {
+  grid-area: slider;
+
+  display: flex;
+
+  width: 100%;
+  height: 60vw;
+  max-height: 37rem;
+}
+
+.message {
+  width: 0%;
+  opacity: 0;
+  transition: width 0.4s ease, opacity 0.4s ease;
+}
+
+.slide {
+  width: 0%;
+  border-radius: 1.1em;
+  transition: width 0.4s ease;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.messages {
+  grid-area: messages;
+  display: flex;
+  align-items: center;
+
+  padding: 0.6rem;
+
+  text-wrap: nowrap;
+
+  overflow: hidden;
+}
+
+.controls {
+  grid-area: controls;
+  justify-self: end;
+
+  display: flex;
+}
+
+.control {
+  height: 2.2rem;
+  width: 2.2rem;
+  padding: 0.6rem;
+
+  cursor: pointer;
+}
+
+.control div {
+  width: 100%;
+  height: 100%;
+
+  border: 0.2rem solid grey;
+  border-radius: 50%;
+  background-color: gray;
+
+  transition: all 0.3s ease;
+}
+
+.control:hover div {
+  border: 0.2rem solid #fff;
+  background-color: #fff;
+}
+
+.control:active div {
+  transform: scale(0.8);
+}
